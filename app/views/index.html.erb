@@ -5,7 +5,9 @@
 </form>
 
 <% if !request.path.index("similar") && !request.path.index("just") && !request.path.index("video") && !request.path.index("genre") && !@playlist_name  %>
-  <section id="trending-artists"></section>
+  <section id="trending-artists">
+    <h2>trending artists</h2>
+  </section>
   <script>$('#trending-artists').trendingArtists();</script>
 <% end %>
 

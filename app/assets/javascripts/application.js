@@ -3,4 +3,4 @@
 //= require rails
 //= require ga
 //= require main
-//= require slimScroll
+//= require trending-artists

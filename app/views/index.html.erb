@@ -4,6 +4,11 @@
   <input type="button" name="similar" value="similar" class="listen similar" tabindex="3"/><br/>
 </form>
 
+<% if !request.path.index("similar") && !request.path.index("just") && !request.path.index("video") && !request.path.index("genre") && !@playlist_name  %>
+  <section id="trending-artists"></section>
+  <script>$('#trending-artists').trendingArtists();</script>
+<% end %>
+
 <section id="empty-playlist" class='middle-tooltip'>
   o_O This playlist has 0 videos... this is kinda weird.
 </section>
@@ -83,5 +88,5 @@
   <%= "just('#{escape_javascript(params[:artist_band])}');"                                       if request.path.index("just") || request.path.index("genre")  %>
   <%= "video('#{escape_javascript(params[:video_id])}');"                                         if request.path.index("video")                                %>
   <%= "similarTo('#{escape_javascript(params[:artist_band])}');"                                  if request.path.index("similar")                              %>
-  <%= "userPlaylist('#{escape_javascript(@username)}','#{url_encode(escape_javascript(@playlist_name))}');"   if @playlist_name                                             %>
+  <%= "userPlaylist('#{escape_javascript(@username)}','#{url_encode(escape_javascript(@playlist_name))}');"   if @playlist_name                                 %>
 </script>

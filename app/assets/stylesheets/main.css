@@ -1,7 +1,7 @@
 *:focus { outline: none !important; }
 * { margin: 0px; padding: 0px; }
 
-html { }
+html { overflow-y: scroll; }
 html, body { width: 100%; }
 
 body {
@@ -62,7 +62,7 @@ input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 20px;
 }
 .mobile-body {
   overflow-x: hidden !important;
@@ -522,4 +522,31 @@ ul#playlists li.already-in-playlist {
   display: inline-block;
   width: 247px;
   margin-bottom: 20px;
+}
+
+#trending-artists {
+  text-align: center;
+}
+#trending-artists .artist-container {
+  display: inline-block;
+  margin: 12px;
+  cursor: pointer;
+}
+#trending-artists .artist-container .artist-name {
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  max-width: 126px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#trending-artists .artist-container img {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
